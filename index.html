@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Squares</title>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div id="start">
+            <p style="text-align: center; font-size: 43px; font-weight:bold;">Квадраты</p>
+            <p>На странице несколько клетчатых квадратиков с цветными клеточками и образец искомого квадратика, который необходимо найти.</p>
+            <p>Квадратики могут поворачиваться, лежать на боку.</p>
+            <p>При разных уровнях сложности разные размер и количество квадратиков, разное количество цветов.</p>
+            <br><br>
+            <p><button id="new_game_button" onclick="new_game()">Новая игра</button></p>
+            <div id="name_player">
+                <p style="font-weight:bold;">Введите ваше имя</p>
+                <input type="text" class="form-control" id="name_input" />
+                <button onclick="input_name()"  class="btn" >Подтвердить</button>
+            </div>
+        </div>
+        <content id="game">
+            <p id="time"></p>
+            <p id="pops"></p>
+            <p id="level"></p>
+            <p><button id='id' onclick="click_button()">Проверить</button></p>
+            <script src="js/script.js"></script>
+            <canvas id='main_rect'>Проверка на ошибки</canvas>
+            <canvas id='answer_rect' class='put_in'></canvas>
+            <script src="js/time.js"></script>
+        </content>
+        <div id="good">
+            <p>Вы победили</p>
+            <p id='score'></p>
+            <p><button onclick="new_game_new()">Новая игра</button></p>
+            <p class="btnSave"><button onclick = "result_save()">Результаты</button></p>
+        </div>
+        <div id="bad">
+            <p>Вы проиграли</p>
+            <p id='score'></p>
+            <p><button onclick="new_game_new()">Новая игра</button></p>
+            <p class="btnSave"><button onclick = "result_save()">Результаты</button></p>
+            </div>
+    </body>
+</html>
