@@ -394,8 +394,16 @@ function new_game_new() {
   window.location.reload();
 }
 
+function fillRectangleWithColor(rectangle) {
+  var context2d = rectangle.getContext('2d');
+  context2d.fillStyle = 'rgb(0, 255, 0)';
+  context2d.fillRect(0, 0, rectangle.width, rectangle.height);
+}
+
 function end_level() {
   var new_rect = document.createElement("div");
+  var rect_answer = document.getElementById("rect_answer");
+  fillRectangleWithColor(rect_answer);
   new_rect.id = "end_level";
   new_rect.innerHTML = "Правильно";
   document.getElementById("game").appendChild(new_rect);
